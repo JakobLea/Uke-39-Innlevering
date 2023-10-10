@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var poengsum = 0; // Oppretter en variabel for å lagre poengsummen og setter den til 0
+    
+        function spørsmålOgSjekk(spm, riktigSvar) {
+          var brukerSvar = prompt(spm); // Stiller brukeren et spørsmål og lagrer svaret
+          if (brukerSvar === null) {
+            return; // Hvis brukeren har kansellert spørsmålet, avslutt funksjonen
+          }
+    
+          if (brukerSvar.toLowerCase() === riktigSvar.toLowerCase()) {
+            console.log("Riktig!"); // Hvis svaret er riktig, skriv "Riktig!" i konsollen
+            poengsum++; // Øk poengsummen
+          } else {
+            console.log("Feil!"); // Hvis svaret er feil, skriv "Feil!" i konsollen og ikke øk poengsummen
+          }
+        }
+    
+        // Still brukeren 3 spørsmål
+        spørsmålOgSjekk("Hva er hovedstaden i Norge?", "Oslo");
+        console.log("Din nåværende poengsum: " + poengsum); // Vis nåværende poengsum for at man skal kunne se det imellom hver av promptene underveis
+        spørsmålOgSjekk("Hvem har skrevet Berserk", "Kentaro Miura");
+        console.log("Din nåværende poengsum: " + poengsum); // Vis nåværende poengsum
+        spørsmålOgSjekk("Hva er hovedstaden i Frankrike?", "Paris");
+        console.log("Din nåværende poengsum: " + poengsum); // Vis nåværende poengsum
+    
+        console.log("Du fikk " + poengsum + " poeng av 3 mulige poeng."); // Vis totalt antall poeng på slutten
+      </script>
+</body>
+
+</html>
