@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 1. Be brukeren om å skrive inn alderen sin
+        var alder = prompt("Skriv inn alderen din:");
+
+        // 2. Sjekk alderen og beregn billettprisen
+        if (alder < 9) {
+            console.log("Billetten er gratis.");
+        } else if (alder >= 9 && alder <= 17) {
+            console.log("Billetten koster 20 kr.");
+        } else if (alder >= 18 && alder <= 65) {
+            console.log("Billetten koster 40 kr.");
+        } else if (alder > 65) {
+            console.log("Billetten koster 20 kr.");
+        } else {
+            console.log("Ugyldig alder. Vennligst skriv inn en gyldig alder.");
+        }
+
+    </script>
+</body>
+
+</html>
