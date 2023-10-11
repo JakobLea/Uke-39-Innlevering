@@ -9,7 +9,7 @@
 
 <body>
     <script>
-        // Opprett listen
+        // Oppretter listen
         var liste = [
             "I", "dag", "er", "jeg", "sa", "lykkelig", "S", "lykkelig", "sa", "lykkelig", "det", "hele",
             "endte", "dejlit", "jeg", "synger", "og", "er", "glad", "Ja", "alting", "endte", "lykkelig", "sa",
@@ -17,9 +17,29 @@
             "er", "lang"
         ];
 
-        // Finn antall ord i listen
+        // Finner antall ord i listen
         var antallOrd = liste.length;
         console.log("Antall ord i listen: " + antallOrd);
+
+        // Lager en funksjon for å telle hvor mange ganger et ord vises i listen
+        function tellOrdet(ord) {
+            var teller = 0; // Setter en variabel teller til 0
+            for (var i = 0; i < liste.length; i++) { // Går gjennom hvert element i listen
+                if (liste[i] === ord) { // Hvis elementet er likt det søkte ordet
+                    teller++; // Øk telleren med 1
+                }
+            }
+            return teller; // Returner antall ganger ordet ble funnet
+        }
+
+        // Finner hvor ofte ordene "sa", "lykkelig" og "dag" vises i listen
+        var antallSa = tellOrdet("sa"); // Bruker funksjonen til å telle "sa"
+        var antallLykkelig = tellOrdet("lykkelig"); // Bruker funksjonen til å telle "lykkelig"
+        var antallDag = tellOrdet("dag"); // Bruker funksjonen til å telle "dag"
+
+        console.log("Antall ganger 'sa' vises: " + antallSa);
+        console.log("Antall ganger 'lykkelig' vises: " + antallLykkelig);
+        console.log("Antall ganger 'dag' vises: " + antallDag);
     </script>
 </body>
 
